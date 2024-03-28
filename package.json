@@ -5,7 +5,8 @@
   "description": "An s3 browser cli binary to select files interactively",
   "main": "index.js",
   "author": "Martin Löper <martin.loeper@nesto-software.de>",
-  "license": "ISC",
+  "repository": "https://github.com/nesto-software/s3-browser-cli",
+  "license": "MIT",
   "bin": {
     "s3select": "./index.js"
   },
