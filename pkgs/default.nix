@@ -1,7 +1,6 @@
 { lib
 , stdenv
 , pkgs
-, fetchFromGitHub
 , system ? builtins.currentSystem
 , ...
 }:
@@ -26,14 +25,13 @@ stdenv.mkDerivation
   buildPhase = ''
     ln -s ${nodeDependencies}/lib/node_modules ./node_modules
     export PATH="${nodeDependencies}/bin:$PATH"
-    
-    npm i
   '';
 
   installPhase = ''
     export PATH="${nodeDependencies}/bin:$PATH"
+    mkdir -p $out/bin
    
-    cp -r index.js package.json $out/
+    cp index.js package.json $out/
     ln -s ${nodeDependencies}/lib/node_modules $out/node_modules
 
     # create cli binary

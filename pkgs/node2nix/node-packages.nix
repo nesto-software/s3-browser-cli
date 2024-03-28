@@ -4,49 +4,13 @@
 
 let
   sources = {
-    "@types/inquirer-7.3.3" = {
-      name = "_at_types_slash_inquirer";
-      packageName = "@types/inquirer";
-      version = "7.3.3";
+    "@nesto-software/inquirer-s3-1.0.2" = {
+      name = "_at_nesto-software_slash_inquirer-s3";
+      packageName = "@nesto-software/inquirer-s3";
+      version = "1.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/inquirer/-/inquirer-7.3.3.tgz";
-        sha512 = "HhxyLejTHMfohAuhRun4csWigAMjXTmRyiJTU1Y/I1xmggikFMkOUoMQRlFm+zQcPEGHSs3io/0FAmNZf8EymQ==";
-      };
-    };
-    "@types/node-20.11.30" = {
-      name = "_at_types_slash_node";
-      packageName = "@types/node";
-      version = "20.11.30";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-20.11.30.tgz";
-        sha512 = "dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==";
-      };
-    };
-    "@types/through-0.0.33" = {
-      name = "_at_types_slash_through";
-      packageName = "@types/through";
-      version = "0.0.33";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/@types/through/-/through-0.0.33.tgz";
-        sha512 = "HsJ+z3QuETzP3cswwtzt2vEIiHBk/dCcHGhbmG5X3ecnwFD/lPrMpliGXxSCg03L9AhrdwA4Oz/qfspkDW+xGQ==";
-      };
-    };
-    "@types/yargs-17.0.32" = {
-      name = "_at_types_slash_yargs";
-      packageName = "@types/yargs";
-      version = "17.0.32";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/@types/yargs/-/yargs-17.0.32.tgz";
-        sha512 = "xQ67Yc/laOG5uMfX/093MRlGGCIBzZMarVa+gfNKJxWAIgykYpVGkBdbqEzGDDfCrVUj6Hiff4mTZ5BA6TmAog==";
-      };
-    };
-    "@types/yargs-parser-21.0.3" = {
-      name = "_at_types_slash_yargs-parser";
-      packageName = "@types/yargs-parser";
-      version = "21.0.3";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/@types/yargs-parser/-/yargs-parser-21.0.3.tgz";
-        sha512 = "I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==";
+        url = "https://registry.npmjs.org/@nesto-software/inquirer-s3/-/inquirer-s3-1.0.2.tgz";
+        sha512 = "FZclRC9JBHsW7A726y3FwY6Z6TCW/CgN5vMwfuXr89udVEpmlQkMJvRNgjZINxDK2pc1SdfGkVaG+/L9fzRl+A==";
       };
     };
     "ansi-escapes-1.4.0" = {
@@ -553,16 +517,6 @@ let
         sha512 = "diSnpgfv/Ozq6QKuV2mUcwZ+D24b03J3W6EVxzvtkCWJTPrH2gKLsqgSW0vzRMZZFhFdhnvzka0RUJxIm7AOxQ==";
       };
     };
-    "inquirer-s3-git+https://github.com/cunneen/inquirer-s3" = {
-      name = "inquirer-s3";
-      packageName = "inquirer-s3";
-      version = "1.0.1";
-      src = fetchgit {
-        url = "https://github.com/cunneen/inquirer-s3";
-        rev = "f5f695b8c50d031614bec85cba73192dde864a94";
-        sha256 = "edaf98359b928bdca16c203161d5368d7373915891f65ac69bd3a72d74cc78cb";
-      };
-    };
     "is-arguments-1.1.1" = {
       name = "is-arguments";
       packageName = "is-arguments";
@@ -869,15 +823,6 @@ let
         sha512 = "CiaiuN6gapkdl+cZUr67W6I8jquN4lkak3vtIsIWCl4XIPP8ffsoyN6/+PuGXnQy8Cu8W2y9Xxh31Rq4M6wUug==";
       };
     };
-    "rxjs-6.6.7" = {
-      name = "rxjs";
-      packageName = "rxjs";
-      version = "6.6.7";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz";
-        sha512 = "hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==";
-      };
-    };
     "s3-ls-2.0.1" = {
       name = "s3-ls";
       packageName = "s3-ls";
@@ -1022,15 +967,6 @@ let
         sha512 = "89PTqMWGDva+GqClOqBV9s3SMh7MA3Mq0pJUdAoHuF65YoE7O0LermaZkVfT5/Ngfo18H4eYiyG7zKOtnEbxsw==";
       };
     };
-    "tslib-1.14.1" = {
-      name = "tslib";
-      packageName = "tslib";
-      version = "1.14.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz";
-        sha512 = "Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==";
-      };
-    };
     "typedarray-0.0.6" = {
       name = "typedarray";
       packageName = "typedarray";
@@ -1038,15 +974,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz";
         sha512 = "/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==";
-      };
-    };
-    "undici-types-5.26.5" = {
-      name = "undici-types";
-      packageName = "undici-types";
-      version = "5.26.5";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz";
-        sha512 = "JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==";
       };
     };
     "url-0.10.3" = {
@@ -1164,21 +1091,17 @@ let
     version = "1.0.1";
     src = ../..;
     dependencies = [
-      sources."@types/inquirer-7.3.3"
-      sources."@types/node-20.11.30"
-      sources."@types/through-0.0.33"
-      sources."@types/yargs-17.0.32"
-      sources."@types/yargs-parser-21.0.3"
+      sources."@nesto-software/inquirer-s3-1.0.2"
       sources."ansi-escapes-1.4.0"
       sources."ansi-regex-2.1.1"
-      sources."ansi-styles-2.2.1"
+      sources."ansi-styles-3.2.1"
       sources."available-typed-arrays-1.0.7"
       sources."aws-sdk-2.1587.0"
       sources."base64-js-1.5.1"
       sources."buffer-4.9.2"
       sources."buffer-from-1.1.2"
       sources."call-bind-1.0.7"
-      sources."chalk-1.1.3"
+      sources."chalk-2.4.2"
       sources."cli-cursor-1.0.2"
       sources."cli-spinners-2.9.2"
       sources."cli-width-2.2.1"
@@ -1207,7 +1130,7 @@ let
       sources."exit-hook-1.1.1"
       sources."extend-3.0.2"
       sources."external-editor-1.1.1"
-      sources."figures-1.7.0"
+      sources."figures-2.0.0"
       sources."for-each-0.3.3"
       sources."function-bind-1.1.2"
       sources."get-caller-file-2.0.5"
@@ -1222,13 +1145,12 @@ let
       sources."hasown-2.0.2"
       sources."ieee754-1.1.13"
       sources."inherits-2.0.4"
-      sources."inquirer-1.2.3"
-      (sources."inquirer-s3-git+https://github.com/cunneen/inquirer-s3" // {
+      (sources."inquirer-1.2.3" // {
         dependencies = [
-          sources."ansi-styles-3.2.1"
-          sources."chalk-2.4.2"
-          sources."figures-2.0.0"
-          sources."supports-color-5.5.0"
+          sources."ansi-styles-2.2.1"
+          sources."chalk-1.1.3"
+          sources."figures-1.7.0"
+          sources."supports-color-2.0.0"
         ];
       })
       sources."is-arguments-1.1.1"
@@ -1242,13 +1164,7 @@ let
       sources."lodash.map-4.6.0"
       sources."lodash.trimend-4.5.1"
       sources."lodash.trimstart-4.5.1"
-      (sources."log-symbols-2.2.0" // {
-        dependencies = [
-          sources."ansi-styles-3.2.1"
-          sources."chalk-2.4.2"
-          sources."supports-color-5.5.0"
-        ];
-      })
+      sources."log-symbols-2.2.0"
       sources."mimic-fn-1.2.0"
       sources."mute-stream-0.0.6"
       sources."number-is-nan-1.0.1"
@@ -1257,13 +1173,10 @@ let
       (sources."ora-3.4.0" // {
         dependencies = [
           sources."ansi-regex-4.1.1"
-          sources."ansi-styles-3.2.1"
-          sources."chalk-2.4.2"
           sources."cli-cursor-2.1.0"
           sources."onetime-2.0.1"
           sources."restore-cursor-2.0.0"
           sources."strip-ansi-5.2.0"
-          sources."supports-color-5.5.0"
         ];
       })
       sources."os-shim-0.1.3"
@@ -1279,7 +1192,6 @@ let
       sources."restore-cursor-1.0.1"
       sources."run-async-2.4.1"
       sources."rx-4.1.0"
-      sources."rxjs-6.6.7"
       sources."s3-ls-2.0.1"
       sources."safe-buffer-5.1.2"
       sources."sax-1.2.1"
@@ -1289,12 +1201,10 @@ let
       sources."string-width-1.0.2"
       sources."string_decoder-1.1.1"
       sources."strip-ansi-3.0.1"
-      sources."supports-color-2.0.0"
+      sources."supports-color-5.5.0"
       sources."through-2.3.8"
       sources."tmp-0.0.29"
-      sources."tslib-1.14.1"
       sources."typedarray-0.0.6"
-      sources."undici-types-5.26.5"
       sources."url-0.10.3"
       sources."util-0.12.5"
       sources."util-deprecate-1.0.2"
@@ -1328,11 +1238,11 @@ let
     buildInputs = globalBuildInputs;
     meta = {
       description = "An s3 browser cli binary to select files interactively";
-      license = "ISC";
+      license = "MIT";
     };
-    production = false;
+    production = true;
     bypassCache = true;
-    reconstructLock = true;
+    reconstructLock = false;
   };
 in
 {

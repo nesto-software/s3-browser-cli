@@ -10,6 +10,8 @@ A command-line utility to select S3 keys interactively.
 
 ### Nix
 
+`nix profile install github:nesto-software/s3-browser-cli`
+
 ## Synopsis
 
 `s3select [options]`
@@ -29,9 +31,9 @@ Note: The *objectPrefix* must be a *folder*, i.e. a key's prefix not the full ob
 
 ```bash
 TMP_FILE=$(mktemp)
-s3select 3>$TMP_FILE
+s3select --redirect 3>$TMP_FILE
 
-SELECTED_S3_KEY=$(echo $TMP_FILE | jq -r '.prefix')
+SELECTED_S3_KEY=$(cat $TMP_FILE | jq -r '.prefix')
 ```
 
 **Why is getting the output so difficult?**

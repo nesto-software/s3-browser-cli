@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import inquirer from "inquirer";
-import inquirer_s3 from "@nesto-software/inquirer-s3";
+import inquirer_s3 from "inquirer-s3";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import fs from "fs";
@@ -67,7 +67,7 @@ yargs(hideBin(process.argv))
     // check if user wants to access the output programmatically
     if (argv.redirect) {
         fd3.write(out);
-        console.log("Wrote result to fd3. If you do not poll fd3, the program hangs idefinitely.");
+        console.log("Wrote result to fd3.");
     } else {
         console.log(out);
     }
