@@ -1,5 +1,9 @@
 # S3 Browser CLI
 
+<p align="center">
+  <img width="600" src="./assets/sample.svg">
+</p>
+
 A command-line utility to select S3 keys interactively.
 
 ## Installation
