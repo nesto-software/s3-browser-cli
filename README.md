@@ -6,6 +6,15 @@
 
 A command-line utility to select S3 keys interactively.
 
+This tool best suits cases in which you want to interactively select an s3 key in your shell script.
+As we currently do not support to search files at a specific directory level, this tool is only usable if you have a limited number of keys per directory level.
+This is e.g. the case if you upload one file per day to your bucket and structure its s3 key as follows: `<year>/<month>/<day>/<upload-timestamp>.zip`.
+
+We wrote this cli tool as there is a lack of comparable tools in the open-source space.
+Our research considered the following similar tools:
+
+- pypi: [s3-browser](https://pypi.org/project/s3-browser/)
+
 ## Installation
 
 ### NPM
