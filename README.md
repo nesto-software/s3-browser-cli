@@ -40,7 +40,18 @@ Our research considered the following similar tools:
 Note: It is invalid to pass an *objectPrefix* without specifying a valid bucket.   
 Note: The *objectPrefix* must be a *folder*, i.e. a key's prefix not the full object's key.
 
-## Usage
+## Output Format
+
+```json
+{ 
+    "bucket": "acme-bucket",
+    "prefix":"09036d7c13ed8e39d23d5552b0f46fb5125764f2df8c85fd313873931631ceff.zip",
+    "objectUrl":"https://s3.amazonaws.com/acme-bucket/09036d7c13ed8e39d23d5552b0f46fb5125764f2df8c85fd313873931631ceff.zip",
+    "s3Uri":"s3://acme-bucket/09036d7c13ed8e39d23d5552b0f46fb5125764f2df8c85fd313873931631ceff.zip"
+}
+```
+
+## Shell Script Usage Example
 
 ```bash
 TMP_FILE=$(mktemp)
@@ -54,14 +65,3 @@ SELECTED_S3_KEY=$(cat $TMP_FILE | jq -r '.prefix')
 This tool uses *inquirer-s3* under the hood which depends on an old version of *inquirer*.
 In new versions of inquirer, there is a [fix](https://github.com/pnp/cli-microsoft365/issues/5489) to this problem and inquirer uses stderr insted of stdout.
 We work around this limitation by using our custom file description with number 3.
-
-## Output
-
-```json
-{ 
-    "bucket": "acme-bucket",
-    "prefix":"09036d7c13ed8e39d23d5552b0f46fb5125764f2df8c85fd313873931631ceff.zip",
-    "objectUrl":"https://s3.amazonaws.com/acme-bucket/09036d7c13ed8e39d23d5552b0f46fb5125764f2df8c85fd313873931631ceff.zip",
-    "s3Uri":"s3://acme-bucket/09036d7c13ed8e39d23d5552b0f46fb5125764f2df8c85fd313873931631ceff.zip"
-}
-```
