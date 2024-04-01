@@ -34,6 +34,8 @@ Package is also distributed on [NUR](https://nur.nix-community.org/repos/mloeper
 
 `s3select [options]`
 
+Note: You must be logged-in to an AWS account on the CLI. That is, the AWS-SDK built into this tool must be able to locate credentials either via config file or env vars.
+
 ### Options
 
 - `--bucket <bucket-name>`: A bucket to pre-select. When specifying the bucket parameter with the name of a valid S3 account owned by your AWS account, the inquirer-s3 module will start to browse at the root of this bucket.
